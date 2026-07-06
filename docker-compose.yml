@@ -15,14 +15,3 @@ services:
       DB_PASS: ${DB_PASS}
     volumes:
       - ./src:/var/www/html
-  db:
-    image: mysql:8.0
-    environment:
-      MYSQL_DATABASE: appdb
-      MYSQL_USER: appuser
-      MYSQL_PASSWORD: apppass
-      MYSQL_ROOT_PASSWORD: rootpass
-    volumes:
-      - db_data:/var/lib/mysql
-volumes:
-  db_data:

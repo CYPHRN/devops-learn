@@ -1,0 +1,12 @@
+servies:
+  db:
+    image: mysql:8.0
+    environment:
+      MYSQL_DATABASE: appdb
+      MYSQL_USER: appuser
+      MSQL_PASSWORD: apppass1234
+      MYSQL_ROOT_PASSWORD: rootpass
+    volumes:
+      - db_data:/var/lib/myysql
+volumes:
+  db_data:
