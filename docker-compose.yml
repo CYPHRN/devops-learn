@@ -7,7 +7,7 @@ services:
       - ./src:/usr/share/nginx/html
       - ./nginx/default.conf:/etc/nginx/conf.d/default.conf
   php:
-    build: ./php
+    image: skarab47/devops-learn-php:latest
     environment:
       DB_HOST: ${DB_HOST}
       DB_NAME: ${DB_NAME}
