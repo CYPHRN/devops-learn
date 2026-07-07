@@ -13,14 +13,14 @@ jobs:
         with:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
-      - name: Push to Docker 
+      - name: Push to Docker
         uses: docker/build-push-action@v6
         with:
           context: ./php
           push: true
           tags: skarab47/devops-learn-php:latest
   deploy:
-    runs-on: ec2-runner
+    runs-on: self-hosted
     needs: build
     steps:
       - name: Checkout Code
