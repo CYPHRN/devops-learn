@@ -9,6 +9,10 @@ services:
     volumes:
       - db_data:/var/lib/mysql
   php:
-    build: ./php
+    build:
+      context: .
+      dockerfile: php/Dockerfile
+    volumes:
+      - ./src:/var/www/html
 volumes:
   db_data:
