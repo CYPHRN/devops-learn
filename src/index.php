@@ -1,5 +1,5 @@
 <?php 
-echo "NGINX Online: OK<br>";
+echo "NGINX v2 Online: OK<br>";
 echo "PHP Online: OK<br>";
 
 $host = getenv("DB_HOST");
